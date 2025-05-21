@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard - Farmer Government Aided Schemes</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/admin.js" defer></script>
+  <script src="js/logger.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+    <section>
+      <h2>Post Crop Details</h2>
+      <form id="crop-form">
+        <input type="text" id="crop-name" placeholder="Crop Name" required />
+        <textarea id="crop-details" placeholder="Crop Details" required></textarea>
+        <button type="submit">Post Crop</button>
+      </form>
+    </section>
+    <section>
+      <h2>Post Government Scheme</h2>
+      <form id="scheme-form">
+        <input type="text" id="scheme-name" placeholder="Scheme Name" required />
+        <textarea id="scheme-details" placeholder="Scheme Details" required></textarea>
+        <button type="submit">Post Scheme</button>
+      </form>
+    </section>
+    <section>
+      <h2>Approve Farmer Scheme Requests</h2>
+      <div id="requests-list">
+        <!-- Requests will be loaded here -->
+      </div>
+    </section>
+  </div>
+</body>
+</html>
